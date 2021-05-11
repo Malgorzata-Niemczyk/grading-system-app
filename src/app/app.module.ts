@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GradesListComponent } from './components/grades-list/grades-list.component';
+import { AddFormComponent } from './components/add-form/add-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    GradesListComponent
+    GradesListComponent,
+    AddFormComponent
   ],
   imports: [
     BrowserModule,
