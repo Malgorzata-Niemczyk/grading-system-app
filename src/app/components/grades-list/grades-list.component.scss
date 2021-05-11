@@ -1,0 +1,45 @@
+$bg-color: #ececec;
+
+.grades__list {
+    padding: 10px;
+    background-color: $bg-color;
+
+    .grades__list__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+        padding: 10px 10px;
+        border-radius: 15px;
+        list-style-type: none;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: white;
+            border: 1px solid #a0a0a0;
+            cursor: pointer;
+        }
+
+        div b {
+            padding-right: 10px;
+        }
+
+        .trash-btn {
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 2px;
+            background-color:transparent;
+            transition: color 0.3s, background-color 0.3s;
+
+            &:hover {
+                color: white;
+                background-color: tomato;
+            }
+
+            fa-icon {
+                font-size: 16px;
+            }
+        }
+    }
+}

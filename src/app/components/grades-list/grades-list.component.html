@@ -1,11 +1,11 @@
 <div>
-    <ul>
-        <li *ngFor="let grade of grades">
+    <ul class="grades__list">
+        <li *ngFor="let grade of grades" class="grades__list__item">
             <div>
                 <b>{{grade.symbolicGrade}}</b>
-                <span>{{grade.minPercentage}}</span> - <span>{{grade.maxPercentage}}</span>
+                <span>{{grade.minPercentage}}%</span> - <span>{{grade.maxPercentage}}%</span>
             </div>
-            <button>
+            <button class="trash-btn">
                 <fa-icon [icon]="faTrashAlt"></fa-icon>
             </button>
         </li>
