@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GradesListComponent } from './components/grades-list/grades-list.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
+import { GradeDetailsComponent } from './components/grade-details/grade-details.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AddFormComponent } from './components/add-form/add-form.component';
     HeaderComponent,
     NavbarComponent,
     GradesListComponent,
-    AddFormComponent
+    AddFormComponent,
+    GradeDetailsComponent
   ],
   imports: [
     BrowserModule,
