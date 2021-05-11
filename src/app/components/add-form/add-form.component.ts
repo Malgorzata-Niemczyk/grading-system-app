@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faSave } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-add-form',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-form.component.scss']
 })
 export class AddFormComponent implements OnInit {
+  faSave = faSave;
 
   constructor() { }
 
