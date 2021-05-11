@@ -1,1 +1,15 @@
-<p>grades-list works!</p>
+<div>
+    <ul>
+        <li *ngFor="let grade of grades">
+            <div>
+                <b>{{grade.symbolicGrade}}</b>
+                <span>{{grade.minPercentage}}</span> - <span>{{grade.maxPercentage}}</span>
+            </div>
+            <button>
+                <fa-icon [icon]="faTrashAlt"></fa-icon>
+            </button>
+        </li>
+    </ul>
+</div>
+
+

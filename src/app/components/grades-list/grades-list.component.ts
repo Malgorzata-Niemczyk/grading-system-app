@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GRADES } from './mock-grades';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-grades-list',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grades-list.component.scss']
 })
 export class GradesListComponent implements OnInit {
+  grades = GRADES;
+  faTrashAlt = faTrashAlt;
 
   constructor() { }
 
