@@ -4,35 +4,35 @@
             "id": "1",
             "minPercentage": 0,
             "maxPercentage": 24,
-            "symbolicGrade": "Unsatisfactory",
+            "symbolicGrade": "E",
             "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
        },
        {
             "id": "2",
             "minPercentage": 25,
             "maxPercentage": 49,
-            "symbolicGrade": "Satisfactory",
+            "symbolicGrade": "D",
             "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
         },
         {
             "id": "3",
             "minPercentage": 50,
             "maxPercentage": 74,
-            "symbolicGrade": "Good",
+            "symbolicGrade": "C",
             "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
         },
         {
             "id": "4",
             "minPercentage": 75,
             "maxPercentage": 99,
-            "symbolicGrade": "Very Good",
+            "symbolicGrade": "B",
             "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
         },
         {
             "id": "5",
             "minPercentage": 100,
             "maxPercentage": 100,
-            "symbolicGrade": "Excellent",
+            "symbolicGrade": "A",
             "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
         }
     ]
