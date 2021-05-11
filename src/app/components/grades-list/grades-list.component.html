@@ -1,4 +1,4 @@
-<div>
+<div class="grades__wrapper">
     <ul class="grades__list">
         <li *ngFor="let grade of grades" class="grades__list__item">
             <div>
@@ -10,6 +10,9 @@
             </button>
         </li>
     </ul>
+    <div class="add-btn__wrapper">
+        <button class="add-btn"><fa-icon [icon]="faPlus"></fa-icon> Add New Grade</button>
+    </div>
 </div>
 
 

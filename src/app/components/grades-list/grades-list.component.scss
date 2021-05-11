@@ -1,8 +1,39 @@
 $bg-color: #ececec;
+$font-color: #003F91;
+
+.grades__wrapper {
+    min-height: 100vh;
+    background-color: $bg-color;
+
+    .add-btn__wrapper {
+        display: flex;
+        justify-content: center;
+
+        .add-btn {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: $font-color;
+            text-transform: uppercase;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                border-radius: 5px;
+                background-color: lightskyblue;
+            }
+
+            fa-icon {
+                margin-right: 5px;
+            }
+        }
+    }
+}
 
 .grades__list {
     padding: 10px;
-    background-color: $bg-color;
 
     .grades__list__item {
         display: flex;
@@ -12,12 +43,12 @@ $bg-color: #ececec;
         padding: 10px 10px;
         border-radius: 15px;
         list-style-type: none;
-        transition: all 0.3s;
+        cursor: pointer;
+        transition: background-color 0.3s, border 0.3s;
 
         &:hover {
             background-color: white;
             border: 1px solid #a0a0a0;
-            cursor: pointer;
         }
 
         div b {
