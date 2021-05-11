@@ -9,9 +9,8 @@ Tech Stack:
 - HTML
 - Font Awesome
 
-
 ## Setup
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Also, run `npm run server` to watch the db.json file with data for changes.
+Also, run `npm run server` to watch the db.json file for data changes.
