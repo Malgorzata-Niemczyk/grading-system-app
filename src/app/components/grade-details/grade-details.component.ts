@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-grade-details',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grade-details.component.scss']
 })
 export class GradeDetailsComponent implements OnInit {
+  faEdit = faEdit;
 
   constructor() { }
 
