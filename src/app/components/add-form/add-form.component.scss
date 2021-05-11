@@ -1,0 +1,49 @@
+.add-form__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 30px 30px;
+    border: 1px solid grey;
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+        margin-bottom: 10px;
+        padding: 10px 5px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: lightskyblue;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #003F91;
+        }
+    }
+}
