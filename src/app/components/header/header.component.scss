@@ -3,7 +3,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    color: rgb(245, 245, 245);
     border-bottom: 1px solid #a0a0a0;
+    background-color: #003F91;
 
     button {
         border-radius: 50%;
@@ -15,6 +17,7 @@ header {
         margin-right: 5px;
         padding: 10px 12px;
         background-color: lightskyblue;
+        box-shadow: 0 0 10px black;
     }
 
     .user-avatar img {
