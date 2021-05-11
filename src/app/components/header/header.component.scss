@@ -1,8 +1,7 @@
-$primary-color: #003F91;
-
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     border-bottom: 1px solid #a0a0a0;
 
@@ -18,9 +17,9 @@ header {
         background-color: lightskyblue;
     }
 
-    button.dotted-btn {
-        padding: 10px 16px;
-        color: white;
-        background-color: $primary-color;
+    .user-avatar img {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
     }
 }
