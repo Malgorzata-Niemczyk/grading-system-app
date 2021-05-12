@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { GradesListComponent } from './components/grades-list/grades-list.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
 import { GradeDetailsComponent } from './components/grade-details/grade-details.component';
+import { AddButtonComponent } from './components/buttons/add-button/add-button.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GradeDetailsComponent } from './components/grade-details/grade-details.
     NavbarComponent,
     GradesListComponent,
     AddFormComponent,
-    GradeDetailsComponent
+    GradeDetailsComponent,
+    AddButtonComponent
   ],
   imports: [
     BrowserModule,
