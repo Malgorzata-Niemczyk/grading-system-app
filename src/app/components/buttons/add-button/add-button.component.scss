@@ -1,0 +1,23 @@
+$font-color: #003F91;
+
+.add-btn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: $font-color;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.3s, border-radius 0.3s, background-color 0.3s;
+
+    &:hover {
+        color: white;
+        border-radius: 5px;
+        background-color: lightskyblue;
+    }
+
+    fa-icon {
+        margin-right: 5px;
+    }
+}
