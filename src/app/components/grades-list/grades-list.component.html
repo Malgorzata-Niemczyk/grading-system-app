@@ -1,6 +1,6 @@
 <div class="grades__wrapper">
     <ul class="grades__list">
-        <li *ngFor="let grade of grades" class="grades__list__item">
+        <li *ngFor="let grade of grades" [grade]="grade" class="grades__list__item">
             <div>
                 <b>{{grade.symbolicGrade}}</b>
                 <span>{{grade.minPercentage}}%</span> - <span>{{grade.maxPercentage}}%</span>
