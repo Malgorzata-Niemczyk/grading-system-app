@@ -31,7 +31,7 @@ export class AddFormComponent implements OnInit {
     const newGrade = {
       minPercentage: this.minPercentage,
       maxPercentage: this.maxPercentage,
-      symbolicGrade: this.symbolicGrade
+      symbolicGrade: this.symbolicGrade.charAt(0)
     }
     
     this.onAddGrade.emit(newGrade);
