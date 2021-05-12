@@ -19,6 +19,16 @@ export class AddFormComponent implements OnInit {
   maxPercentage: number;
   symbolicGrade: string;
 
+  //properties for the form option fields
+  grades: string[] = [
+    'A - Excellent',
+    'B - Very Good',
+    'C - Good',
+    'D - Satisfactory',
+    'E - Poor',
+    'F - Failing'
+  ];
+
   showAddGradeForm: boolean;
   subscription: Subscription;
 
