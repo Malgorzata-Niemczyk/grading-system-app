@@ -9,6 +9,7 @@ import { GradesListComponent } from './components/grades-list/grades-list.compon
 import { AddFormComponent } from './components/add-form/add-form.component';
 import { GradeDetailsComponent } from './components/grade-details/grade-details.component';
 import { AddButtonComponent } from './components/buttons/add-button/add-button.component';
+import { GradeItemComponent } from './components/grade-item/grade-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddButtonComponent } from './components/buttons/add-button/add-button.c
     GradesListComponent,
     AddFormComponent,
     GradeDetailsComponent,
-    AddButtonComponent
+    AddButtonComponent,
+    GradeItemComponent
   ],
   imports: [
     BrowserModule,
