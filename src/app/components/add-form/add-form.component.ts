@@ -1,5 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { gradesList } from '../../components/grades-list/mock-grades';
 
 @Component({
   selector: 'app-add-form',
@@ -7,6 +8,8 @@ import { faSave } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./add-form.component.scss']
 })
 export class AddFormComponent implements OnInit {
+  @Output() onAddGrade: EventEmitter<gradesList> = new EventEmitter();
+
   faSave = faSave;
 
   // properties for the form fields
@@ -24,10 +27,13 @@ export class AddFormComponent implements OnInit {
       return;
     }
 
+    
     const newGrade = {
       minPercentage: this.minPercentage,
       maxPercentage: this.maxPercentage,
       symbolicGrade: this.symbolicGrade
     }
+    
+    this.onAddGrade.emit(newGrade);
   }
 }

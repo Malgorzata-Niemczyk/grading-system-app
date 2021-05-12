@@ -21,6 +21,10 @@ export class GradesListComponent implements OnInit {
     this.gradesService.deleteGrade(grade).subscribe(() => this.grades.filter((g) => g.id !== grade.id));
   }
 
+  addGrade(grade: gradesList) {
+    console.log(grade)
+  }
+
   toggleAddGradeForm() {
     console.log('toggle')
   }
