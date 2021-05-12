@@ -1,5 +1,5 @@
 export interface gradesList {
-    id: string,
+    id?: string,
     minPercentage: number,
     maxPercentage: number,
     symbolicGrade: string
