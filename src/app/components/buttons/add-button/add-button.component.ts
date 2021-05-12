@@ -10,9 +10,12 @@ export class AddButtonComponent implements OnInit {
   faPlus = faPlus;
   @Input() text: string;
 
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  onClick() {
+    console.log('Added')
+  }
 }
