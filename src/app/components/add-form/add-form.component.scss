@@ -6,6 +6,24 @@
     padding: 30px 30px;
     border: 1px solid grey;
 
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        .form-control.ng-touched.ng-invalid {
+            border: 1px solid red;
+        }
+        
+        .form-control.ng-touched.ng-valid {
+            border: 1px solid green;
+        }
+
+        .text-danger {
+            color: red;
+        }
+    }
+
     label {
         margin-bottom: 5px;
     }

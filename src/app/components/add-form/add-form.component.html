@@ -1,39 +1,67 @@
 <form 
-    *ngIf="showAddGradeForm" 
+    *ngIf="showAddGradeForm"
+    [formGroup]="exform"
     class="add-form__wrapper" 
     #gradesForm="ngForm" 
     (ngSubmit)="onSubmit(); gradesForm.reset()"
 >
-    <label for="min-percentage">Percent from (%):</label>
-    <input 
-        type="number" 
-        min="0" 
-        max="100" 
-        name="minPercentage" 
-        [(ngModel)]="minPercentage" 
-        placeholder="Add percentage..." 
-        required
-    >
-    <label for="max-percentage">Percent to (%):</label>
-    <input 
-        type="number" 
-        min="0" max="100" 
-        name="maxPercentage" 
-        [(ngModel)]="maxPercentage" 
-        placeholder="Add percentage..." 
-        required
-    >
-    <label for="symbolicGrade">Grade:</label>
-    <select 
-        id="symbolicGrade" 
-        name="symbolicGrade"
-        [(ngModel)]="symbolicGrade"  
-        required
-    >
-        <option value="0" disabled selected>- Select a grade -</option>
-        <option *ngFor="let grade of grades" [value]="grade">{{grade}}</option>
-    </select>
-    <button type="submit">
+    <div class="form-group">
+        <label for="min-percentage">Percent from (%):</label>
+        <input 
+            type="number"
+            class="form-control" 
+            min="0" 
+            max="100" 
+            name="minPercentage" 
+            formControlName="minPercentage"
+            placeholder="Add percentage..." 
+            required
+        >   
+        <small 
+            class="text-danger"
+            *ngIf="exform.get('minPercentage').invalid && exform.get('minPercentage').touched"
+        >
+            Percentage is required (min 0% and max 100%)
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="max-percentage">Percent to (%):</label>
+        <input 
+            type="number" 
+            class="form-control"
+            min="0" max="100" 
+            name="maxPercentage"
+            formControlName="maxPercentage"  
+            placeholder="Add percentage..." 
+            required
+        >
+        <small 
+            class="text-danger"
+            *ngIf="exform.get('maxPercentage').invalid && exform.get('maxPercentage').touched"
+        >
+            Percentage is required (min 0% and max 100%)
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="symbolicGrade">Grade:</label>
+        <select 
+            class="form-control"
+            id="symbolicGrade" 
+            name="symbolicGrade"
+            formControlName="symbolicGrade"  
+            required
+        >
+            <option value="0" disabled selected>- Select a grade -</option>
+            <option *ngFor="let grade of grades" [value]="grade">{{grade}}</option>
+        </select>
+        <small 
+            class="text-danger"
+            *ngIf="exform.get('symbolicGrade').invalid && exform.get('symbolicGrade').touched"
+        >
+            Grade is required
+        </small>
+    </div>
+    <button [disabled]="exform.invalid" type="submit">
         <fa-icon [icon]="faSave"></fa-icon> 
         Save Grade
     </button>

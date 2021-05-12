@@ -3,6 +3,7 @@ import { faSave } from '@fortawesome/free-solid-svg-icons';
 import { gradesList } from '../../components/grades-list/mock-grades';
 import { UiService } from '../../services/ui.service';
 import { Subscription } from 'rxjs';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-form',
@@ -29,6 +30,12 @@ export class AddFormComponent implements OnInit {
     'F - Failing'
   ];
 
+  exform = new FormGroup({
+    'minPercentage': new FormControl(null, [Validators.min(0), Validators.max(100), Validators.required]),
+    'maxPercentage': new FormControl(null, [Validators.min(0), Validators.max(100), Validators.required]),
+    'symbolicGrade': new FormControl(null, Validators.required)
+  });
+
   showAddGradeForm: boolean;
   subscription: Subscription;
 
@@ -41,18 +48,16 @@ export class AddFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    if (!this.symbolicGrade && !this.minPercentage && !this.maxPercentage) {
-      alert('Please fill in all the form fields');
-      return;
-    }
+    if (this.exform.valid) {
+      const data = this.exform.value;
 
-    
-    const newGrade = {
-      minPercentage: this.minPercentage,
-      maxPercentage: this.maxPercentage,
-      symbolicGrade: this.symbolicGrade.charAt(0)
+      const newGrade = {
+        minPercentage: data.minPercentage,
+        maxPercentage: data.maxPercentage,
+        symbolicGrade: data.symbolicGrade.charAt(0)
+      }
+      
+      this.onAddGrade.emit(newGrade);
     }
-    
-    this.onAddGrade.emit(newGrade);
   }
-}
+};
