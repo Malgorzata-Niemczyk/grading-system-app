@@ -20,7 +20,11 @@ header {
         margin-right: 5px;
         padding: 10px 12px;
         background-color: lightskyblue;
-        box-shadow: 0 0 10px black;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #f5f5f5;
+        }
     }
 
     .user-avatar img {
