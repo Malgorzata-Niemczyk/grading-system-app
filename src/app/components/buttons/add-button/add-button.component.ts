@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -9,13 +9,13 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 export class AddButtonComponent implements OnInit {
   faPlus = faPlus;
   @Input() text: string;
-
+  @Output() btnClick = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {}
 
   onClick() {
-    console.log('Added')
+    this.btnClick.emit();
   }
 }

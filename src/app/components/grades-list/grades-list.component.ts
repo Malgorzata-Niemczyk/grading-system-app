@@ -13,7 +13,9 @@ export class GradesListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  toggleAddGradeForm() {
+    console.log('toggle')
+  }
 }
