@@ -1,6 +1,10 @@
 <div class="grades__wrapper">
     <ul class="grades__list">
-        <app-grade-item *ngFor="let grade of grades" [grade]="grade"></app-grade-item>
+        <app-grade-item 
+            *ngFor="let grade of grades" 
+            [grade]="grade"
+            (onDeleteGrade)="deleteGrade(grade)"
+        ></app-grade-item>
     </ul>
     <div class="add-btn__wrapper">
         <app-add-button

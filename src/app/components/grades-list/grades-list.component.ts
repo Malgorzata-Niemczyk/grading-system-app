@@ -14,7 +14,11 @@ export class GradesListComponent implements OnInit {
   constructor(private gradesService: GradesService) { }
 
   ngOnInit(): void {
-    this.gradesService.fetchGradesList().subscribe((grades) => this.grades = grades);
+    this.gradesService.fetchGradesList().subscribe(grades => this.grades = grades);
+  }
+
+  deleteGrade(grade: gradesList) {
+    this.gradesService.deleteGrade(grade).subscribe(() => this.grades.filter((g) => g.id !== grade.id));
   }
 
   toggleAddGradeForm() {

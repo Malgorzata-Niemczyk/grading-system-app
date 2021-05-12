@@ -12,6 +12,11 @@ export class GradesService {
   constructor(private http: HttpClient) { }
 
   fetchGradesList(): Observable<gradesList[]> {
-    return this.http.get<gradesList[]>(this.apiURL)
+    return this.http.get<gradesList[]>(this.apiURL);
+  }
+
+  deleteGrade(grade: gradesList): Observable<gradesList> {
+    const url = `${this.apiURL}/${grade.id}`;
+    return this.http.delete<gradesList>(url);
   }
 }
