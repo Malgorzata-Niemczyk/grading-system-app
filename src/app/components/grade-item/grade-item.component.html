@@ -3,7 +3,11 @@
         <b>{{grade.symbolicGrade}}</b>
         <span>{{grade.minPercentage}}%</span> - <span>{{grade.maxPercentage}}%</span>
     </div>
-    <button class="trash-btn" title="Delete Grade">
+    <button
+        (click)="onDelete(grade)"
+        class="trash-btn" 
+        title="Delete Grade"
+    >
         <fa-icon [icon]="faTrashAlt"></fa-icon>
     </button>
 </li>
