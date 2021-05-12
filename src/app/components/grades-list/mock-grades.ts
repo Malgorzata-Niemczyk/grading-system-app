@@ -1,4 +1,4 @@
-interface gradesList {
+export interface gradesList {
     id: string,
     minPercentage: number,
     maxPercentage: number,
