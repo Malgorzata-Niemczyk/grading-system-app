@@ -9,6 +9,11 @@ import { faSave } from '@fortawesome/free-solid-svg-icons';
 export class AddFormComponent implements OnInit {
   faSave = faSave;
 
+  // properties for the form fields
+  minPercentage: number;
+  maxPercentage: number;
+  symbolicGrade: string;
+
   constructor() { }
 
   ngOnInit(): void {
