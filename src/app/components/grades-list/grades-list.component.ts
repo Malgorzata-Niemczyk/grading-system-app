@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GradesService } from '../../services/grades.service';
 import { gradesList } from './mock-grades';
-import { fromEventPattern } from 'rxjs';
+import { UiService } from '../../services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-grades-list',
@@ -10,8 +11,12 @@ import { fromEventPattern } from 'rxjs';
 })
 export class GradesListComponent implements OnInit {
   grades: gradesList[] = [];
+  showAddGradeForm: boolean;
+  subscription: Subscription;
 
-  constructor(private gradesService: GradesService) { }
+  constructor(private gradesService: GradesService, private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddGradeForm = value);
+  }
 
   ngOnInit(): void {
     this.gradesService.fetchGradesList().subscribe(grades => this.grades = grades);
@@ -26,6 +31,6 @@ export class GradesListComponent implements OnInit {
   }
 
   toggleAddGradeForm() {
-    console.log('toggle')
+    this.uiService.toggleAddGradeForm();
   }
 }
