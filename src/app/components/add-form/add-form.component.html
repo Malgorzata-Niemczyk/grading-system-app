@@ -1,10 +1,35 @@
-<form *ngIf="showAddGradeForm" class="add-form__wrapper" #gradesForm="ngForm" (ngSubmit)="onSubmit(); gradesForm.reset()">
+<form 
+    *ngIf="showAddGradeForm" 
+    class="add-form__wrapper" 
+    #gradesForm="ngForm" 
+    (ngSubmit)="onSubmit(); gradesForm.reset()"
+>
     <label for="min-percentage">Percent from (%):</label>
-    <input type="number" min="0" max="100" name="minPercentage" [(ngModel)]="minPercentage" placeholder="Add percentage..." required>
+    <input 
+        type="number" 
+        min="0" 
+        max="100" 
+        name="minPercentage" 
+        [(ngModel)]="minPercentage" 
+        placeholder="Add percentage..." 
+        required
+    >
     <label for="max-percentage">Percent to (%):</label>
-    <input type="number" min="0" max="100" name="maxPercentage" [(ngModel)]="maxPercentage" placeholder="Add percentage..." required>
+    <input 
+        type="number" 
+        min="0" max="100" 
+        name="maxPercentage" 
+        [(ngModel)]="maxPercentage" 
+        placeholder="Add percentage..." 
+        required
+    >
     <label for="symbolicGrade">Grade:</label>
-    <select id="symbolicGrade" name="symbolicGrade" [(ngModel)]="symbolicGrade" required>
+    <select 
+        id="symbolicGrade" 
+        name="symbolicGrade" 
+        [(ngModel)]="symbolicGrade" 
+        required
+    >
         <option value="" disabled selected>- Select a grade -</option>
         <option value="A - Excellent">A - Excellent</option>
         <option value="B - Very Good">B - Very Good</option>
