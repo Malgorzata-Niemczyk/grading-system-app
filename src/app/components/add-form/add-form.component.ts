@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -16,7 +16,18 @@ export class AddFormComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  onSubmit() {
+    if (!this.symbolicGrade && !this.minPercentage && !this.maxPercentage) {
+      alert('Please fill in all the form fields');
+      return;
+    }
+
+    const newGrade = {
+      minPercentage: this.minPercentage,
+      maxPercentage: this.maxPercentage,
+      symbolicGrade: this.symbolicGrade
+    }
+  }
 }

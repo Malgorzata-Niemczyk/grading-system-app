@@ -1,4 +1,4 @@
-<div class="add-form__wrapper">
+<form class="add-form__wrapper" #gradesForm="ngForm" (ngSubmit)="onSubmit(); gradesForm.reset()">
     <label for="min-percentage">Percent from (%):</label>
     <input type="number" min="0" max="100" name="minPercentage" [(ngModel)]="minPercentage" placeholder="Add percentage..." required>
     <label for="max-percentage">Percent to (%):</label>
@@ -17,4 +17,4 @@
         <fa-icon [icon]="faSave"></fa-icon> 
         Save Grade
     </button>
-</div>
+</form>
