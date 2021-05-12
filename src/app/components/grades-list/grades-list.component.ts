@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GRADES } from './mock-grades';
+import { GradesService } from '../../services/grades.service';
 import { gradesList } from './mock-grades';
 import { fromEventPattern } from 'rxjs';
 
@@ -9,11 +9,13 @@ import { fromEventPattern } from 'rxjs';
   styleUrls: ['./grades-list.component.scss']
 })
 export class GradesListComponent implements OnInit {
-  grades: gradesList[] = GRADES;
+  grades: gradesList[] = [];
 
-  constructor() { }
+  constructor(private gradesService: GradesService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.gradesService.fetchGradesList().subscribe((grades) => this.grades = grades);
+  }
 
   toggleAddGradeForm() {
     console.log('toggle')
