@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GRADES } from './mock-grades';
 import { gradesList } from './mock-grades';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { fromEventPattern } from 'rxjs';
 
 @Component({
@@ -11,7 +10,6 @@ import { fromEventPattern } from 'rxjs';
 })
 export class GradesListComponent implements OnInit {
   grades: gradesList[] = GRADES;
-  faTrashAlt = faTrashAlt;
 
   constructor() { }
 
