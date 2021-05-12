@@ -3,6 +3,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { gradesList } from '../../app/components/grades-list/mock-grades';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,5 +24,9 @@ export class GradesService {
   deleteGrade(grade: gradesList): Observable<gradesList> {
     const url = `${this.apiURL}/${grade.id}`;
     return this.http.delete<gradesList>(url);
+  }
+
+  addGrade(grade: gradesList): Observable<gradesList> {
+    return this.http.post<gradesList>(this.apiURL, grade, httpOptions);
   }
 }

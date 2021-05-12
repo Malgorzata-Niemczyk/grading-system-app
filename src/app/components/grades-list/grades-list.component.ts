@@ -22,7 +22,7 @@ export class GradesListComponent implements OnInit {
   }
 
   addGrade(grade: gradesList) {
-    console.log(grade)
+    this.gradesService.addGrade(grade).subscribe(grade => [...this.grades, grade]);
   }
 
   toggleAddGradeForm() {
