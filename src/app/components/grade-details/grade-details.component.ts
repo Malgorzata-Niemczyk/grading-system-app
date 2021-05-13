@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { gradesList } from '../../components/grades-list/mock-grades';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 })
 export class GradeDetailsComponent implements OnInit {
   faEdit = faEdit;
+  @Input() grade: gradesList;
 
   constructor() { }
 
