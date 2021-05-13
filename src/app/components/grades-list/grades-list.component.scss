@@ -20,7 +20,12 @@ $bg-color: #ececec;
     }
 }
 
-.grades-details__wrapper {
+.grades-details__wrapper--mobile {
+    min-width: 100%;
+    background-color: white;
+}
+
+.grades-details__wrapper, .grades-details__wrapper--mobile {
     padding: 30px;
 
     p {
@@ -77,5 +82,17 @@ $bg-color: #ececec;
         max-height: 200px;
         margin-top: 30px;
         object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .grades-details__wrapper, .select-message {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 675px) {
+    .grades-details__wrapper--mobile {
+        display: none;
     }
 }
