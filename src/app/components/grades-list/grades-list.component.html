@@ -18,6 +18,11 @@
         <app-add-form (onAddGrade)="addGrade($event)"></app-add-form>
     </div>
 
+    <div class="select-message" *ngIf="!selectedGrade">
+        <h3>Select the grade from the list on the left hand side to see the grade details.</h3>
+        <img src="../../../assets/img/grade-icon.png" alt="grade icon">
+    </div>
+
     <div class="grades-details__wrapper" *ngIf="selectedGrade">
         <div class="percentages-wrapper">
             <div class="min-percentage">

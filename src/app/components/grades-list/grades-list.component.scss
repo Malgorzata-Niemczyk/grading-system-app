@@ -63,3 +63,19 @@ $bg-color: #ececec;
         }
     }
 }
+
+.select-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+    img {
+        max-width: 200px;
+        max-height: 200px;
+        margin-top: 30px;
+        object-fit: cover;
+    }
+}
