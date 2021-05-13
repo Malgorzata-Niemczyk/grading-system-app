@@ -13,6 +13,7 @@ export class GradesListComponent implements OnInit {
   grades: gradesList[] = [];
   showAddGradeForm: boolean;
   subscription: Subscription;
+  selectedGrade: gradesList;
 
   constructor(private gradesService: GradesService, private uiService: UiService) {
     this.subscription = this.uiService.onToggle().subscribe(value => this.showAddGradeForm = value);
@@ -32,5 +33,10 @@ export class GradesListComponent implements OnInit {
 
   toggleAddGradeForm() {
     this.uiService.toggleAddGradeForm();
+  }
+
+  onSelect(grade: gradesList): void {
+    this.selectedGrade = grade;
+    console.log(this.selectedGrade)
   }
 }

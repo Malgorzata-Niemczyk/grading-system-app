@@ -3,6 +3,7 @@
         <app-grade-item 
             *ngFor="let grade of grades" 
             [grade]="grade"
+            (click)="onSelect(grade)"
             (onDeleteGrade)="deleteGrade(grade)"
         ></app-grade-item>
     </ul>
