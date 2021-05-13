@@ -2,7 +2,8 @@ export interface gradesList {
     id?: string,
     minPercentage: number,
     maxPercentage: number,
-    symbolicGrade: string
+    symbolicGrade: string,
+    descriptiveGrade?: string,
 }
 
 export const GRADES: gradesList[] = [
