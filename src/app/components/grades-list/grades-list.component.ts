@@ -22,7 +22,7 @@ export class GradesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.gradesService.fetchGradesList().subscribe(grades => this.grades = grades);
+    this.gradesService.fetchGradesList().subscribe(grades => this.grades = grades.sort((a, b) => (a.minPercentage > b.minPercentage) ? 1 : (b.minPercentage > a.minPercentage) ? -1 : 0));
   }
 
   deleteGrade(grade: gradesList) {

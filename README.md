@@ -16,7 +16,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ⭐ JSON-Server (as a mock back-end)
 
 ## Features
-✔️ Displaying the list of grades
+✔️ Displaying the list of grades sorted according to the minimum percentage grade
 
 ✔️ Detailed display of a grade when clicking on the item from the list
 
