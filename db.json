@@ -1,39 +1,46 @@
 {
     "grades": [
-       {
+        {
             "id": "1",
             "minPercentage": 0,
-            "maxPercentage": 24,
-            "symbolicGrade": "E",
-            "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+            "maxPercentage": 34,
+            "symbolicGrade": "F",
+            "descriptiveGrade": "Considerable further work is required before the credit can be awarded."
        },
        {
             "id": "2",
-            "minPercentage": 25,
+            "minPercentage": 35,
             "maxPercentage": 49,
-            "symbolicGrade": "D",
-            "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
-        },
-        {
+            "symbolicGrade": "E",
+            "descriptiveGrade": "Performance meets the minimum criteria."
+       },
+       {
             "id": "3",
             "minPercentage": 50,
-            "maxPercentage": 74,
-            "symbolicGrade": "C",
-            "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
+            "maxPercentage": 60,
+            "symbolicGrade": "D",
+            "descriptiveGrade": "Fair but with significant shortcomings."
         },
         {
             "id": "4",
-            "minPercentage": 75,
-            "maxPercentage": 99,
-            "symbolicGrade": "B",
-            "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+            "minPercentage": 61,
+            "maxPercentage": 70,
+            "symbolicGrade": "C",
+            "descriptiveGrade": "Generally sound work but with a number of notable errors."
         },
         {
             "id": "5",
-            "minPercentage": 100,
+            "minPercentage": 71,
+            "maxPercentage": 85,
+            "symbolicGrade": "B",
+            "descriptiveGrade": "Above the average standard with some minor errors."
+        },
+        {
+            "id": "6",
+            "minPercentage": 86,
             "maxPercentage": 100,
             "symbolicGrade": "A",
-            "descriptiveGrade": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
+            "descriptiveGrade": "Outstanding performance with only minor errors."
         }
     ]
 }
