@@ -1,45 +1,47 @@
-<div class="grades__wrapper">
-    <ul class="grades__list">
-        <app-grade-item 
-            *ngFor="let grade of grades" 
-            [grade]="grade"
-            (click)="onSelect(grade)"
-            (onDeleteGrade)="deleteGrade(grade)"
-        ></app-grade-item>
-    </ul>
-    <div class="add-btn__wrapper">
-        <app-add-button
-            text="{{ showAddGradeForm ? '× Close Grade Form' : '+ Add New Grade' }}"
-            (btnClick)="toggleAddGradeForm()"
-        >
-        </app-add-button>
+<div class="grades-container">
+    <div class="grades__wrapper">
+        <ul class="grades__list">
+            <app-grade-item 
+                *ngFor="let grade of grades" 
+                [grade]="grade"
+                (click)="onSelect(grade)"
+                (onDeleteGrade)="deleteGrade(grade)"
+            ></app-grade-item>
+        </ul>
+        <div class="add-btn__wrapper">
+            <app-add-button
+                text="{{ showAddGradeForm ? '× Close Grade Form' : '+ Add New Grade' }}"
+                (btnClick)="toggleAddGradeForm()"
+            >
+            </app-add-button>
+        </div>
+        <app-add-form (onAddGrade)="addGrade($event)"></app-add-form>
     </div>
-    <app-add-form (onAddGrade)="addGrade($event)"></app-add-form>
-</div>
 
-<div class="grades-details__wrapper" *ngIf="selectedGrade">
-    <div class="percentages-wrapper">
-        <div class="min-percentage">
-            <p>Percent from (%):</p>
-            <span>{{selectedGrade.minPercentage}}</span>
+    <div class="grades-details__wrapper" *ngIf="selectedGrade">
+        <div class="percentages-wrapper">
+            <div class="min-percentage">
+                <p>Percent from (%):</p>
+                <span>{{selectedGrade.minPercentage}}</span>
+            </div>
+            <div class="max-percentage">
+                <p>Percent to (%):</p>
+                <span>{{selectedGrade.maxPercentage}}</span>
+            </div>
         </div>
-        <div class="max-percentage">
-            <p>Percent to (%):</p>
-            <span>{{selectedGrade.maxPercentage}}</span>
+        <div class="symboic-grade">
+            <p>Grade:</p>
+            <span>{{selectedGrade.symbolicGrade}}</span>
         </div>
+        <div class="grade-description">
+            <p>Grade description:</p>
+            <span>{{selectedGrade.descriptiveGrade}}</span>
+        </div>
+        <button class="edit-btn">
+            <fa-icon [icon]="faEdit"></fa-icon>
+            Edit Grade
+        </button>
     </div>
-    <div class="symboic-grade">
-        <p>Grade:</p>
-        <span>{{selectedGrade.symbolicGrade}}</span>
-    </div>
-    <div class="grade-description">
-        <p>Grade description:</p>
-        <span>{{selectedGrade.descriptiveGrade}}</span>
-    </div>
-    <button class="edit-btn">
-        <fa-icon [icon]="faEdit"></fa-icon>
-        Edit Grade
-    </button>
 </div>
 
 
