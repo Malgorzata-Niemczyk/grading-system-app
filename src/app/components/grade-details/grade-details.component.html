@@ -1,21 +1,22 @@
+<!-- FOR DESKTOP DEVICES -->
 <div class="grades-details__wrapper">
     <div class="percentages-wrapper">
         <div class="min-percentage">
             <p>Percent from (%):</p>
-            <span>90</span>
+            <span>{{grade.minPercentage}}</span>
         </div>
         <div class="max-percentage">
             <p>Percent to (%):</p>
-            <span>100</span>
+            <span>{{grade.maxPercentage}}</span>
         </div>
     </div>
     <div class="symboic-grade">
         <p>Grade:</p>
-        <span>A - Excellent</span>
+        <span>{{grade.symbolicGrade}}</span>
     </div>
     <div class="grade-description">
         <p>Grade description:</p>
-        <span>Well done on this assessment!</span>
+        <span>{{grade.descriptiveGrade}}</span>
     </div>
     <button class="edit-btn">
         <fa-icon [icon]="faEdit"></fa-icon>

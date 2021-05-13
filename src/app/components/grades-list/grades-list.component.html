@@ -1,29 +1,6 @@
 <div class="grades-container">
     <div class="grades__wrapper">
-        <div class="grades-details__wrapper--mobile" *ngIf="selectedGrade">
-            <div class="percentages-wrapper">
-                <div class="min-percentage">
-                    <p>Percent from (%):</p>
-                    <span>{{selectedGrade.minPercentage}}</span>
-                </div>
-                <div class="max-percentage">
-                    <p>Percent to (%):</p>
-                    <span>{{selectedGrade.maxPercentage}}</span>
-                </div>
-            </div>
-            <div class="symboic-grade">
-                <p>Grade:</p>
-                <span>{{selectedGrade.symbolicGrade}}</span>
-            </div>
-            <div class="grade-description">
-                <p>Grade description:</p>
-                <span>{{selectedGrade.descriptiveGrade}}</span>
-            </div>
-            <button class="edit-btn">
-                <fa-icon [icon]="faEdit"></fa-icon>
-                Edit Grade
-            </button>
-        </div>
+        <app-grade-details-mobile [grade]="selectedGrade" *ngIf="selectedGrade"></app-grade-details-mobile>
         <ul class="grades__list">
             <app-grade-item 
                 *ngFor="let grade of grades" 
@@ -44,34 +21,11 @@
         </div>
     </div>
 
+    <app-grade-details [grade]="selectedGrade" *ngIf="selectedGrade"></app-grade-details>
+
     <div class="select-message" *ngIf="!selectedGrade">
         <h3>Select the grade from the list on the left hand side <br> to see the grade details.</h3>
         <img src="../../../assets/img/grade-icon.png" alt="grade icon">
-    </div>
-
-    <div class="grades-details__wrapper" *ngIf="selectedGrade">
-        <div class="percentages-wrapper">
-            <div class="min-percentage">
-                <p>Percent from (%):</p>
-                <span>{{selectedGrade.minPercentage}}</span>
-            </div>
-            <div class="max-percentage">
-                <p>Percent to (%):</p>
-                <span>{{selectedGrade.maxPercentage}}</span>
-            </div>
-        </div>
-        <div class="symboic-grade">
-            <p>Grade:</p>
-            <span>{{selectedGrade.symbolicGrade}}</span>
-        </div>
-        <div class="grade-description">
-            <p>Grade description:</p>
-            <span>{{selectedGrade.descriptiveGrade}}</span>
-        </div>
-        <button class="edit-btn">
-            <fa-icon [icon]="faEdit"></fa-icon>
-            Edit Grade
-        </button>
     </div>
 </div>
 

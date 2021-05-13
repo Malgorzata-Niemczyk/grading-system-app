@@ -1,0 +1,45 @@
+.grades-details__wrapper--mobile {
+    min-width: 100%;
+    padding: 30px;
+    background-color: white;
+
+    p {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .symboic-grade, .grade-description {
+        margin-bottom: 15px;
+    }
+
+    .percentages-wrapper {
+        display: flex;
+        gap: 30px;
+
+        div {
+            margin-bottom: 15px;
+        }
+    }
+
+    .edit-btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: #8adf0a;
+        transition: background-color 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #6eac13;
+        }
+
+        fa-icon {
+            margin-right: 5px;
+        }
+    }
+}

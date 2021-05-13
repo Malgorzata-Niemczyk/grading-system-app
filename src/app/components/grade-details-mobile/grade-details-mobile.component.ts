@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { gradesList } from '../../components/grades-list/mock-grades';
 
 @Component({
   selector: 'app-grade-details-mobile',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grade-details-mobile.component.scss']
 })
 export class GradeDetailsMobileComponent implements OnInit {
+  faEdit = faEdit;
+  @Input() grade: gradesList;
 
   constructor() { }
 
