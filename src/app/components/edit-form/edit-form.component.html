@@ -1,1 +1,76 @@
-<p>edit-form works!</p>
+<form 
+    class="edit-form__wrapper" 
+>
+    <div class="form-group">
+        <label for="min-percentage">Percent from (%):</label>
+        <input 
+            type="number"
+            class="form-control" 
+            min="0" 
+            max="100" 
+            name="minPercentage" 
+            formControlName="minPercentage"
+            placeholder="Add percentage..." 
+            required
+        >   
+        <small 
+            class="text-danger"
+        >
+            Percentage is required (min 0% and max 100%)
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="max-percentage">Percent to (%):</label>
+        <input 
+            type="number" 
+            class="form-control"
+            min="0" max="100" 
+            name="maxPercentage"
+            formControlName="maxPercentage"  
+            placeholder="Add percentage..." 
+            required
+        >
+        <small 
+            class="text-danger"
+        >
+            Percentage is required (min 0% and max 100%)
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="symbolicGrade">Grade:</label>
+        <select 
+            class="form-control"
+            id="symbolicGrade" 
+            name="symbolicGrade"
+            formControlName="symbolicGrade"  
+            required
+        >
+            <option value="0" disabled selected>- Select a grade -</option>
+            <option></option>
+        </select>
+        <small 
+            class="text-danger"
+        >
+            Grade is required
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="descriptiveGrade">Grade description:</label>
+        <textarea 
+            name="descriptiveGrade" 
+            id="descriptiveGrade"
+            rows="5"
+        ></textarea>
+        <small 
+            class="text-danger"
+        >
+            Grade description is required
+        </small>
+    </div>
+    <button type="submit">
+        <fa-icon [icon]="faSave"></fa-icon> 
+        Save Changes
+    </button>
+</form>
+
+
