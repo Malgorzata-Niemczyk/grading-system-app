@@ -10,6 +10,10 @@ $bg-color: #ececec;
     background-color: $bg-color;
     padding-bottom: 30px;
 
+    .grade__details--mobile__wrapper {
+        background-color: white;
+    }
+
     .add-btn__wrapper {
         display: flex;
         justify-content: center;
@@ -39,13 +43,13 @@ $bg-color: #ececec;
 }
 
 @media screen and (max-width: 675px) {
-    app-grade-details {
+    .grade__details--desktop {
         display: none;
     }
 }
 
 @media screen and (min-width: 675px) {
-    app-grade-details-mobile {
+    .grade__details--mobile {
         display: none;
     }
 }

@@ -1,6 +1,8 @@
 <div class="grades-container">
     <div class="grades__wrapper">
-        <app-grade-details-mobile [grade]="selectedGrade" *ngIf="selectedGrade"></app-grade-details-mobile>
+        <div class="grade__details--mobile__wrapper">
+            <app-grade-details class="grade__details--mobile" [grade]="selectedGrade" *ngIf="selectedGrade"></app-grade-details>
+        </div>
         <ul class="grades__list">
             <app-grade-item 
                 *ngFor="let grade of grades" 
@@ -21,7 +23,7 @@
         </div>
     </div>
 
-    <app-grade-details [grade]="selectedGrade" *ngIf="selectedGrade"></app-grade-details>
+    <app-grade-details class="grade__details--desktop" [grade]="selectedGrade" *ngIf="selectedGrade"></app-grade-details>
 
     <div class="select-message" *ngIf="!selectedGrade">
         <h3>Select the grade from the list on the left hand side <br> to see the grade details.</h3>
