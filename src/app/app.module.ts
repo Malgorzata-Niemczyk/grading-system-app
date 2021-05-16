@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,6 +15,12 @@ import { AddButtonComponent } from './components/buttons/add-button/add-button.c
 import { GradeItemComponent } from './components/grade-item/grade-item.component';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
 import { HomeComponent } from './components/home/home.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'grades', component: GradesListComponent },
+  { path: 'edit-grade-form', component: EditFormComponent }
+];
 
 @NgModule({
   declarations: [
@@ -32,7 +39,8 @@ import { HomeComponent } from './components/home/home.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
