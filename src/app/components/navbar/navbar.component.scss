@@ -1,3 +1,5 @@
+$nav-color: #f5f5f5;
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -5,7 +7,7 @@ nav {
     position: sticky;
     top: 0;
     padding: 10px 20px;
-    color: #f5f5f5;
+    color: $nav-color;
     border-bottom: 1px solid #a0a0a0;
     background-color: #003F91;
     z-index: 5;
@@ -13,31 +15,37 @@ nav {
     .header-links-wrapper {
         display: flex;
 
-        h3 {
-            margin-right: 25px;
+        a {
+            color: $nav-color;
+            text-decoration: none;
+            text-transform: uppercase;
 
-            button {
-                border-radius: 50%;
-                border: none;
-                cursor: pointer;
-            }
-        
-            button.grade-btn, button.home-btn {
-                margin-right: 5px;
-                background-color: lightskyblue;
-                transition: color 0.3s;
-        
-                &:hover {
-                    color: #f5f5f5;
+            h3 {
+                margin-right: 25px;
+    
+                &:hover > button {
+                    color: $nav-color;
                 }
-            }
-        
-            button.grade-btn {
-                padding: 10px 10px;
-            }
-        
-            button.home-btn {
-                padding: 10px 11px
+    
+                button {
+                    border-radius: 50%;
+                    border: none;
+                    cursor: pointer;
+                }
+            
+                button.grade-btn, button.home-btn {
+                    margin-right: 5px;
+                    background-color: lightskyblue;
+                    transition: color 0.3s;
+                }
+            
+                button.grade-btn {
+                    padding: 10px 10px;
+                }
+            
+                button.home-btn {
+                    padding: 10px 11px
+                }
             }
         }
     }
@@ -46,7 +54,7 @@ nav {
         width: 45px;
         height: 45px;
         object-fit: cover;
-        background-color: #f5f5f5;
+        background-color: $nav-color;
         border-radius: 50%;
         cursor: pointer;
     }
