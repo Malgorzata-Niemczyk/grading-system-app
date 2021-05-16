@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,7 +15,6 @@ import { AddButtonComponent } from './components/buttons/add-button/add-button.c
 import { GradeItemComponent } from './components/grade-item/grade-item.component';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
 import { HomeComponent } from './components/home/home.component';
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
