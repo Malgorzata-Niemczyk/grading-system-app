@@ -7,7 +7,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { GradesListComponent } from './components/grades-list/grades-list.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
 import { GradeDetailsComponent } from './components/grade-details/grade-details.component';
@@ -19,7 +18,6 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavbarComponent,
     GradesListComponent,
     AddFormComponent,
     GradeDetailsComponent,
