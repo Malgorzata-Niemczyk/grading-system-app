@@ -13,6 +13,7 @@ import { GradeDetailsComponent } from './components/grade-details/grade-details.
 import { AddButtonComponent } from './components/buttons/add-button/add-button.component';
 import { GradeItemComponent } from './components/grade-item/grade-item.component';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
     AddButtonComponent,
     GradeItemComponent,
     EditFormComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
