@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-import { GradesListComponent } from './components/grades-list/grades-list.component';
+import { GradesListComponent } from './components/grades/grades-list/grades-list.component';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
 
 const appRoutes: Routes = [

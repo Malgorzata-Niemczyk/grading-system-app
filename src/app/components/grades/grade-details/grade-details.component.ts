@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
-import { gradesList } from '../../components/grades-list/mock-grades';
+import { gradesList } from '../grades-list/mock-grades';
 
 
 @Component({

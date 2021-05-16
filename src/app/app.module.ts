@@ -8,11 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { GradesListComponent } from './components/grades-list/grades-list.component';
+import { GradesListComponent } from './components/grades/grades-list/grades-list.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
-import { GradeDetailsComponent } from './components/grade-details/grade-details.component';
+import { GradeDetailsComponent } from './components/grades/grade-details/grade-details.component';
 import { AddButtonComponent } from './components/buttons/add-button/add-button.component';
-import { GradeItemComponent } from './components/grade-item/grade-item.component';
+import { GradeItemComponent } from './components/grades/grade-item/grade-item.component';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
 import { HomeComponent } from './components/home/home.component';
 

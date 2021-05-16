@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
-import { gradesList } from '../../components/grades-list/mock-grades';
+import { gradesList } from '../grades/grades-list/mock-grades';
 import { UiService } from '../../services/ui.service';
 import { Subscription } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';

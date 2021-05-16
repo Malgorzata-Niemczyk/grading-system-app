@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GradesService } from '../../services/grades.service';
+import { GradesService } from '../../../services/grades.service';
 import { gradesList } from './mock-grades';
-import { UiService } from '../../services/ui.service';
+import { UiService } from '../../../services/ui.service';
 import { Subscription } from 'rxjs';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 

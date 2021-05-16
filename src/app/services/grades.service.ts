@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { gradesList } from '../../app/components/grades-list/mock-grades';
+import { gradesList } from '../components/grades/grades-list/mock-grades';
 
 const httpOptions = {
   headers: new HttpHeaders({
