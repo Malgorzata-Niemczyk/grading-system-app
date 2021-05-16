@@ -1,6 +1,6 @@
  import { Component, OnInit } from '@angular/core';
- import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
- import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+ import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +8,9 @@
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  title:string = 'Grading system';
-  faArrowLeft = faArrowLeft;
-  faEllipsisV = faEllipsisV;
+  title: string = 'Grading system';
+  faGraduationCap = faGraduationCap;
+  faHome = faHome;
 
   constructor() { }
 

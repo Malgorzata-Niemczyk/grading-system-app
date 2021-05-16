@@ -1,10 +1,18 @@
 <header>
-    <h3>
-        <button class="arrow-btn">
-            <fa-icon [icon]="faArrowLeft"></fa-icon>
-        </button> 
-        {{ title }}
-    </h3>
+    <div class="header-links-wrapper">
+        <h3>
+            <button class="home-btn">
+                <fa-icon [icon]="faHome"></fa-icon>
+            </button> 
+            Home
+        </h3>
+        <h3>
+            <button class="grade-btn">
+                <fa-icon [icon]="faGraduationCap"></fa-icon>
+            </button> 
+            {{ title }}
+        </h3>
+    </div>
     <div class="user-avatar">
         <img src="../../../assets/img/user-avatar.png" alt="user-avatar">
     </div>
