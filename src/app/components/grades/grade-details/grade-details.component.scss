@@ -1,5 +1,10 @@
 .grades-details__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 30px;
+    border: 1px solid grey;
 
     p {
         margin-bottom: 5px;
