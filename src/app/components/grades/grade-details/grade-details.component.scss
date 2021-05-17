@@ -17,6 +17,23 @@ $bg-color: #ececec;
         text-align: center;
     }
 
+    .alert-success {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        margin-bottom: 5px;
+        color: green;
+        background-color: rgb(148, 246, 148);
+
+        .close-btn {
+            color: green;
+            background-color: rgb(148, 246, 148);
+            padding: 0 10px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
     .form-group {
         display: flex;
         flex-direction: column;

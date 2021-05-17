@@ -16,6 +16,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class GradeDetailsComponent implements OnInit {
   faEdit = faEdit;
   faChevronCircleLeft = faChevronCircleLeft;
+  alert: boolean = false;
 
   @Input() grade: gradesList;
 
@@ -54,7 +55,11 @@ export class GradeDetailsComponent implements OnInit {
 
   gradesCollection() {
     const id = this.route.snapshot.paramMap.get('id');
-
-    this.GradesService.updateGradeDetails(id, this.exform.value).subscribe(result => console.log(result));
+    this.GradesService.updateGradeDetails(id, this.exform.value).subscribe(result => this.alert = true);
   }
+
+  closeAlert() {
+    this.alert = false;
+  }
+
 }
