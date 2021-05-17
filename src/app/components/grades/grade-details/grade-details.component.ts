@@ -51,4 +51,8 @@ export class GradeDetailsComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  gradesCollection() {
+    console.log(this.exform.value);
+  }
 }

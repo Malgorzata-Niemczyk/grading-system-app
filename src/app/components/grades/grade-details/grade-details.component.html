@@ -1,4 +1,8 @@
-<form class="grades-details__wrapper" [formGroup]="exform">
+<form 
+    class="grades-details__wrapper" 
+    [formGroup]="exform"
+    (ngSubmit)="gradesCollection()"
+>
     <div class="percentages-wrapper">
         <div class="min-percentage form-group">
             <p>Percent from (%):</p>
