@@ -22,7 +22,8 @@ export class GradeDetailsComponent implements OnInit {
   exform = new FormGroup({
     'minPercentage': new FormControl(null, [Validators.min(0), Validators.max(100), Validators.required]),
     'maxPercentage': new FormControl(null, [Validators.min(0), Validators.max(100), Validators.required]),
-    'symbolicGrade': new FormControl(null, Validators.required)
+    'symbolicGrade': new FormControl(null, Validators.required),
+    'descriptiveGrade': new FormControl(null, Validators.required)
   });
 
   constructor(
@@ -37,7 +38,14 @@ export class GradeDetailsComponent implements OnInit {
 
   fetchSelectedGrade(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.GradesService.fetchSelectedGrade(id).subscribe(grade => this.grade = grade);
+    this.GradesService.fetchSelectedGrade(id).subscribe(grade => {
+      this.exform = new FormGroup({
+        'minPercentage': new FormControl(grade['minPercentage']),
+        'maxPercentage': new FormControl(grade['maxPercentage']),
+        'symbolicGrade': new FormControl(grade['symbolicGrade']),
+        'descriptiveGrade': new FormControl(grade['descriptiveGrade'])
+      });
+    });
   }
 
   goBack(): void {
