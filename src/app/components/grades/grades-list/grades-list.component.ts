@@ -14,7 +14,6 @@ export class GradesListComponent implements OnInit {
   grades: gradesList[] = [];
   showAddGradeForm: boolean;
   subscription: Subscription;
-  selectedGrade: gradesList;
   faEdit = faEdit;
 
   constructor(private gradesService: GradesService, private uiService: UiService) {
@@ -35,9 +34,5 @@ export class GradesListComponent implements OnInit {
 
   toggleAddGradeForm() {
     this.uiService.toggleAddGradeForm();
-  }
-
-  onSelect(grade: gradesList): void {
-    this.selectedGrade = grade;
   }
 }
