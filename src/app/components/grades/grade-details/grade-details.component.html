@@ -2,20 +2,42 @@
     <div class="percentages-wrapper">
         <div class="min-percentage">
             <p>Percent from (%):</p>
-            <span>{{grade.minPercentage}}</span>
+            <input 
+                type="number" 
+                name="minPercentage"
+                required
+            >
         </div>
         <div class="max-percentage">
             <p>Percent to (%):</p>
-            <span>{{grade.maxPercentage}}</span>
+            <input 
+                type="number" 
+                name="maxPercentage"
+                required
+            >
         </div>
     </div>
     <div class="symbolic-grade">
         <p>Grade:</p>
-        <span>{{grade.symbolicGrade}}</span>
+        <select 
+            class="form-control"
+            id="symbolicGrade" 
+            name="symbolicGrade"
+            required
+        >
+            <option value="0" disabled selected>- Select a grade -</option>
+            <option></option>
+        </select>
     </div>
     <div class="grade-description">
         <p>Grade description:</p>
-        <span>{{grade.descriptiveGrade}}</span>
+        <textarea 
+            name="descriptiveGrade" 
+            id="descriptiveGrade" 
+            cols="48" 
+            rows="8"
+            required
+        ></textarea>
     </div>
     <div class="buttons-wrapper">
         <button class="edit-btn">
