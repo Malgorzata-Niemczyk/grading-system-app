@@ -34,4 +34,8 @@ export class GradesService {
   addGrade(grade: gradesList): Observable<gradesList> {
     return this.http.post<gradesList>(this.apiURL, grade, httpOptions);
   }
+
+  updateGradeDetails(id: string, data) {
+    return this.http.put<gradesList>(`${this.apiURL}/${id}`, data)
+  }
 }

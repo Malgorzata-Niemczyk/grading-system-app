@@ -53,6 +53,8 @@ export class GradeDetailsComponent implements OnInit {
   }
 
   gradesCollection() {
-    console.log(this.exform.value);
+    const id = this.route.snapshot.paramMap.get('id');
+
+    this.GradesService.updateGradeDetails(id, this.exform.value).subscribe(result => console.log(result));
   }
 }
