@@ -1,85 +1,87 @@
-<form 
-    class="grades-details__wrapper" 
-    [formGroup]="exform"
-    (ngSubmit)="gradesCollection()"
->
-    <div class="percentages-wrapper">
-        <div class="min-percentage form-group">
-            <p>Percent from (%):</p>
+<div class="grades-details__wrapper">
+    <h2>Edit Grade Details</h2>
+    <form  
+        [formGroup]="exform"
+        (ngSubmit)="gradesCollection()"
+    >
+        <div class="percentages-wrapper">
+            <div class="min-percentage form-group">
+                <p>Percent from (%):</p>
+                <input 
+                    class="form-control"
+                    type="number" 
+                    name="minPercentage"
+                    formControlName="minPercentage"
+                    placeholder="Add percentage..." 
+                    required
+                >
+                <small 
+                    class="text-danger"
+                    *ngIf="exform.get('minPercentage').invalid && exform.get('minPercentage').touched"
+                >
+                    Percentage is required (min 0% and max 100%)
+                </small>
+            </div>
+            <div class="max-percentage form-group">
+                <p>Percent to (%):</p>
+                <input 
+                    class="form-control"
+                    type="number" 
+                    name="maxPercentage"
+                    formControlName="maxPercentage"  
+                    placeholder="Add percentage..."
+                    required
+                >
+                <small 
+                    class="text-danger"
+                    *ngIf="exform.get('maxPercentage').invalid && exform.get('maxPercentage').touched"
+                >
+                    Percentage is required (min 0% and max 100%)
+                </small>
+            </div>
+        </div>
+        <div class="symbolic-grade form-group">
+            <p>Grade:</p>
             <input 
                 class="form-control"
-                type="number" 
-                name="minPercentage"
-                formControlName="minPercentage"
-                placeholder="Add percentage..." 
+                type="text"
+                name="symbolicGrade"
+                formControlName="symbolicGrade"
                 required
             >
             <small 
                 class="text-danger"
-                *ngIf="exform.get('minPercentage').invalid && exform.get('minPercentage').touched"
+                *ngIf="exform.get('symbolicGrade').invalid && exform.get('symbolicGrade').touched"
             >
-                Percentage is required (min 0% and max 100%)
+                Symbolic grade is required (from A to F)
             </small>
         </div>
-        <div class="max-percentage form-group">
-            <p>Percent to (%):</p>
-            <input 
+        <div class="grade-description form-group">
+            <p>Grade description:</p>
+            <textarea 
                 class="form-control"
-                type="number" 
-                name="maxPercentage"
-                formControlName="maxPercentage"  
-                placeholder="Add percentage..."
+                name="descriptiveGrade" 
+                formControlName="descriptiveGrade"
+                rows="8"
+                placeholder="Add grade description..."
                 required
-            >
+            ></textarea>
             <small 
                 class="text-danger"
-                *ngIf="exform.get('maxPercentage').invalid && exform.get('maxPercentage').touched"
+                *ngIf="exform.get('descriptiveGrade').invalid && exform.get('descriptiveGrade').touched"
             >
-                Percentage is required (min 0% and max 100%)
+                Grade description is required
             </small>
         </div>
-    </div>
-    <div class="symbolic-grade form-group">
-        <p>Grade:</p>
-        <input 
-            class="form-control"
-            type="text"
-            name="symbolicGrade"
-            formControlName="symbolicGrade"
-            required
-        >
-        <small 
-            class="text-danger"
-            *ngIf="exform.get('symbolicGrade').invalid && exform.get('symbolicGrade').touched"
-        >
-            Symbolic grade is required (from A to F)
-        </small>
-    </div>
-    <div class="grade-description form-group">
-        <p>Grade description:</p>
-        <textarea 
-            class="form-control"
-            name="descriptiveGrade" 
-            formControlName="descriptiveGrade"
-            rows="8"
-            placeholder="Add grade description..."
-            required
-        ></textarea>
-        <small 
-            class="text-danger"
-            *ngIf="exform.get('descriptiveGrade').invalid && exform.get('descriptiveGrade').touched"
-        >
-            Grade description is required
-        </small>
-    </div>
-    <div class="buttons-wrapper">
-        <button class="edit-btn" type="submit" [disabled]="exform.invalid">
-            <fa-icon [icon]="faEdit"></fa-icon>
-            Save Edits
-        </button>
-        <button class="go-back-btn" (click)="goBack()">
-            <fa-icon [icon]="faChevronCircleLeft"></fa-icon> 
-            Go back
-        </button>
-    </div>
-</form>
+        <div class="buttons-wrapper">
+            <button class="edit-btn" type="submit" [disabled]="exform.invalid">
+                <fa-icon [icon]="faEdit"></fa-icon>
+                Save Edits
+            </button>
+            <button class="go-back-btn" (click)="goBack()">
+                <fa-icon [icon]="faChevronCircleLeft"></fa-icon> 
+                Go back
+            </button>
+        </div>
+    </form>
+</div>

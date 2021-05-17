@@ -11,6 +11,12 @@ $bg-color: #ececec;
     box-shadow: 0 0 30px grey;
     background-color: $bg-color;
 
+    h2 {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
     .form-group {
         display: flex;
         flex-direction: column;
