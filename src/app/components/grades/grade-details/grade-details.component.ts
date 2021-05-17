@@ -19,22 +19,6 @@ export class GradeDetailsComponent implements OnInit {
 
   @Input() grade: gradesList;
 
-  // properties for the form fields
-  minPercentage: number;
-  maxPercentage: number;
-  symbolicGrade: string;
-  descriptiveGrade: string;
-
-  //properties for the form option fields
-  grades: string[] = [
-    'A - Excellent',
-    'B - Very Good',
-    'C - Good',
-    'D - Satisfactory',
-    'E - Poor',
-    'F - Failing'
-  ];
-
   exform = new FormGroup({
     'minPercentage': new FormControl(null, [Validators.min(0), Validators.max(100), Validators.required]),
     'maxPercentage': new FormControl(null, [Validators.min(0), Validators.max(100), Validators.required]),
