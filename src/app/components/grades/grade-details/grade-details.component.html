@@ -9,7 +9,7 @@
             <span>{{grade.maxPercentage}}</span>
         </div>
     </div>
-    <div class="symboic-grade">
+    <div class="symbolic-grade">
         <p>Grade:</p>
         <span>{{grade.symbolicGrade}}</span>
     </div>
@@ -17,8 +17,14 @@
         <p>Grade description:</p>
         <span>{{grade.descriptiveGrade}}</span>
     </div>
-    <button class="edit-btn">
-        <fa-icon [icon]="faEdit"></fa-icon>
-        Edit Grade
-    </button>
+    <div class="buttons-wrapper">
+        <button class="edit-btn">
+            <fa-icon [icon]="faEdit"></fa-icon>
+            Save Edits
+        </button>
+        <button class="go-back-btn" (click)="goBack()">
+            <fa-icon [icon]="faChevronCircleLeft"></fa-icon> 
+            Go back
+        </button>
+    </div>
 </div>

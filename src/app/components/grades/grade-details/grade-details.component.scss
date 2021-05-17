@@ -12,7 +12,7 @@
         font-size: 14px;
     }
 
-    .symboic-grade, .grade-description {
+    .symbolic-grade, .grade-description {
         margin-bottom: 15px;
     }
 
@@ -25,24 +25,41 @@
         }
     }
 
-    .edit-btn {
-        margin-top: 10px;
-        padding: 10px 20px;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        background-color: #8adf0a;
-        transition: background-color 0.3s;
-        cursor: pointer;
+    .buttons-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
 
-        &:hover {
-            background-color: #6eac13;
+        .edit-btn {
+            background-color: #8adf0a;
+
+            &:hover {
+                background-color: #6eac13;
+            }
         }
 
-        fa-icon {
-            margin-right: 5px;
+        .go-back-btn {
+            background-color: skyblue;
+
+            &:hover {
+                background-color: rgb(37, 37, 216);
+            }
+        }
+
+        .edit-btn, .go-back-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+    
+            fa-icon {
+                margin-right: 5px;
+            }
         }
     }
 }

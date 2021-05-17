@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { GradesService } from '../../../services/grades.service';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { gradesList } from '../grades-list/mock-grades';
 
 
@@ -13,6 +14,8 @@ import { gradesList } from '../grades-list/mock-grades';
 })
 export class GradeDetailsComponent implements OnInit {
   faEdit = faEdit;
+  faChevronCircleLeft = faChevronCircleLeft;
+
   @Input() grade: gradesList;
 
   constructor(
@@ -28,5 +31,9 @@ export class GradeDetailsComponent implements OnInit {
   fetchSelectedGrade(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.GradesService.fetchSelectedGrade(id).subscribe(grade => this.grade = grade);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }
