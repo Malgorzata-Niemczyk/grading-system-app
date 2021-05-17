@@ -3,6 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
 ## Tech Stack:
+
 ⭐ Angular
 
 ⭐ JavaScript (TypeScript)
@@ -16,9 +17,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ⭐ JSON-Server (as a mock back-end)
 
 ## Features
+
 ✔️ Displaying the list of grades sorted according to the minimum percentage grade
 
 ✔️ Detailed display of a grade when clicking on the item from the list
+
+✔️ Edition of the grade details
 
 ✔️ Removing a sepecific item from the list of grades
 
@@ -26,25 +30,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ✔️ Adding a new grade to the list of grades
 
-✔️ Display adjusted to mobile devices
-
-## To Do
-📌 Edition of the grade details
-
-
 ## App Views
 
 View with the grades list and a form to add a new grade:
 
 ![](./screenshots/grades-list.PNG)
 
-View with the grades list and grade details:
+Editable grade details view:
 
-![](./screenshots/grades-list-with-details.PNG)
+![](./screenshots/editable-grades-details.PNG)
 
-Mobile view:
-
-![](./screenshots/mobile-view.PNG)
 
 ## Setup
 
