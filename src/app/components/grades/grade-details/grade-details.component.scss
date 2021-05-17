@@ -11,25 +11,43 @@ $bg-color: #ececec;
     box-shadow: 0 0 30px grey;
     background-color: $bg-color;
 
-    p {
-        margin-bottom: 5px;
-        font-weight: bold;
-        font-size: 16px;
-    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
 
-    input, select, textarea {
-        padding: 5px 5px;
-        font-family: 'Raleway', sans-serif;
-    }
+        .form-control.ng-touched.ng-invalid {
+            border: 1px solid red;
+        }
+        
+        .form-control.ng-touched.ng-valid {
+            border: 1px solid green;
+        }
 
-    input[type=number]::-webkit-inner-spin-button, 
-    input[type=number]::-webkit-outer-spin-button { 
-        -webkit-appearance: none; 
-        margin: 0; 
-    }
+        .text-danger {
+            margin-top: 5px;
+            color: red;
+        }
 
-    input[type="number"] {
-        -moz-appearance: textfield;
+        input, select, textarea {
+            padding: 5px 5px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        p {
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 16px;
+        }
     }
 
     .symbolic-grade, .grade-description {
