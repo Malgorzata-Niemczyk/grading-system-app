@@ -5,7 +5,7 @@
             <span>{{grade.minPercentage}}%</span> - <span>{{grade.maxPercentage}}%</span>
         </div>
         <button
-            (click)="onDelete(grade)"
+            (click)="onDelete(grade, $event)"
             class="trash-btn" 
             title="Delete Grade"
             >

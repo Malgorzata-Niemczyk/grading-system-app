@@ -17,8 +17,10 @@ export class GradeItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onDelete(grade) {
+  onDelete(grade, event: Event) {
     this.onDeleteGrade.emit(grade);
+    event.stopPropagation();
+    event.preventDefault();
   }
 
 }
