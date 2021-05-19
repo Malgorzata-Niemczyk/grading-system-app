@@ -18,9 +18,11 @@ export class GradeItemComponent implements OnInit {
   }
 
   onDelete(grade, event: Event) {
-    this.onDeleteGrade.emit(grade);
     event.stopPropagation();
     event.preventDefault();
-  }
 
+    if (window.confirm("Are you sure you want to delete this item?")) {
+      this.onDeleteGrade.emit(grade);
+    }
+  }
 }
