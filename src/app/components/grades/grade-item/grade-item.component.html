@@ -1,15 +1,20 @@
-<a routerLink="/grades/{{grade.id}}">
-    <li class="grades__list__item">
-        <div>
-            <b>{{grade.symbolicGrade}}</b>
-            <span>{{grade.minPercentage}}%</span> - <span>{{grade.maxPercentage}}%</span>
-        </div>
+<li class="grades__list__item">
+    <div>
+        <b>{{grade.symbolicGrade}}</b>
+        <span>{{grade.minPercentage}}%</span> - <span>{{grade.maxPercentage}}%</span>
+    </div>
+    <div class="buttons-wrapper">
+        <a routerLink="/grades/{{grade.id}}">
+            <button class="edit-btn">
+                <fa-icon [icon]="faEdit"></fa-icon>
+            </button>
+        </a>
         <button
             (click)="onDelete(grade, $event)"
             class="trash-btn" 
             title="Delete Grade"
-            >
+        >
             <fa-icon [icon]="faTrashAlt"></fa-icon>
         </button>
-    </li>
-</a>
+    </div>
+</li>

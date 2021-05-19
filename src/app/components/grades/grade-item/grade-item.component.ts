@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { gradesList } from '../grades-list/mock-grades';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-grade-item',
@@ -10,7 +11,9 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 export class GradeItemComponent implements OnInit {
   @Input() grade: gradesList;
   @Output() onDeleteGrade: EventEmitter<gradesList> = new EventEmitter();
+
   faTrashAlt = faTrashAlt;
+  faEdit = faEdit;
 
   constructor() { }
 
