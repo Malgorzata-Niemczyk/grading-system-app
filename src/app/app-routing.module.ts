@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { GradesListComponent } from './components/grades/grades-list/grades-list.component';
-import { GradeDetailsComponent } from './components/grades/grade-details/grade-details.component';
+import { GradeDetailsComponent } from './components/grades/edit-grade-details/grade-details.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
