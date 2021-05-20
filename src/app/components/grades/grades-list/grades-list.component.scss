@@ -10,10 +10,6 @@ $bg-color: #ececec;
     background-color: $bg-color;
     padding-bottom: 30px;
 
-    .grade__details--mobile__wrapper {
-        background-color: white;
-    }
-
     .add-btn__wrapper {
         display: flex;
         justify-content: center;
@@ -21,6 +17,16 @@ $bg-color: #ececec;
 
     .grades__list {
         padding: 10px;
+
+        app-grade-item {
+            cursor: pointer;
+        }
+
+        .selected {
+            font-size: 19px;
+            font-weight: bold;
+            color: #18d100;
+        }
     }
 }
 

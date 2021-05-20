@@ -3,6 +3,7 @@
         <app-selected-grade-details class="grade__details--mobile" [grade]="selectedGrade" *ngIf="selectedGrade"></app-selected-grade-details>
         <ul class="grades__list">
             <app-grade-item 
+            [class.selected]="grade === selectedGrade"
                 *ngFor="let grade of grades" 
                 [grade]="grade"
                 (click)="onSelect(grade)"
