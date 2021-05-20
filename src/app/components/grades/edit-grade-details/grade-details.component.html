@@ -86,7 +86,7 @@
                 <fa-icon [icon]="faEdit"></fa-icon>
                 Save Edits
             </button>
-            <button class="go-back-btn" (click)="goBack()">
+            <button class="go-back-btn" (click)="goBack()" [disabled]="exform.invalid">
                 <fa-icon [icon]="faChevronCircleLeft"></fa-icon> 
                 Go back
             </button>
