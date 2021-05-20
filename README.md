@@ -36,10 +36,17 @@ View with the grades list and a form to add a new grade:
 
 ![](./screenshots/grades-list.PNG)
 
-Editable grade details view:
+View with the grades list and grade details:
 
-![](./screenshots/editable-grades-details.PNG)
+![](./screenshots/grades-list-and-details.PNG)
 
+View of the form to edit grade details:
+
+![](./screenshots/edit-form.PNG)
+
+Mobile view:
+
+![](./screenshots/mobile-view.PNG)
 
 ## Setup
 
