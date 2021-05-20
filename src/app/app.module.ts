@@ -14,6 +14,7 @@ import { GradeDetailsComponent } from './components/grades/edit-grade-details/gr
 import { AddButtonComponent } from './components/buttons/add-button/add-button.component';
 import { GradeItemComponent } from './components/grades/grade-item/grade-item.component';
 import { HomeComponent } from './components/home/home.component';
+import { SelectedGradeDetailsComponent } from './components/grades/selected-grade-details/selected-grade-details.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HomeComponent } from './components/home/home.component';
     AddButtonComponent,
     GradeItemComponent,
     HomeComponent,
+    SelectedGradeDetailsComponent,
   ],
   imports: [
     BrowserModule,
