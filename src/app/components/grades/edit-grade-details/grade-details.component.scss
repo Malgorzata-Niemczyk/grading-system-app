@@ -124,3 +124,15 @@ $bg-color: #ececec;
         }
     }
 }
+
+@media screen and (max-width: 456px) {
+    .grades-details__wrapper {
+        min-width: 300px;
+
+        .percentages-wrapper {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+}
