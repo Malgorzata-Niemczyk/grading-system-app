@@ -1,9 +1,11 @@
 <div class="grades-container">
     <div class="grades__wrapper">
+        <app-selected-grade-details class="grade__details--mobile" [grade]="selectedGrade" *ngIf="selectedGrade"></app-selected-grade-details>
         <ul class="grades__list">
             <app-grade-item 
                 *ngFor="let grade of grades" 
                 [grade]="grade"
+                (click)="onSelect(grade)"
                 (onDeleteGrade)="deleteGrade(grade)"
             ></app-grade-item>
         </ul>
@@ -19,7 +21,9 @@
         </div>
     </div>
 
-    <div class="select-message">
+    <app-selected-grade-details class="grade__details--desktop" [grade]="selectedGrade" *ngIf="selectedGrade"></app-selected-grade-details>
+
+    <div class="select-message" *ngIf="!selectedGrade">
         <h3>Select the grade from the list on the left hand side <br> to see the grade details.</h3>
         <img src="../../../assets/img/grade-icon.png" alt="grade icon">
     </div>
